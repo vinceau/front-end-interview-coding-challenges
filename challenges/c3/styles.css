@@ -22,12 +22,13 @@ body {
     font-weight: bold;
 }
 
-.slider .lower > div {
+.slider .lower::before {
+    display: block;
     margin-top: -43px;
 }
 
-.slider .lower > div::before,
-.slider .upper > div::before {
+.slider .lower::before,
+.slider .upper::before {
     content: "Awesome Alpha";
 }
 
