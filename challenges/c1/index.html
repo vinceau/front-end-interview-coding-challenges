@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +9,62 @@
 
     <style>
         /* Write your CSS code here */
-    
-    </style>
 
+        /* shift the body down a bit so that we can actually see the popup*/
+        body {
+            padding-top: 100px;
+        }
+
+        .main-area {
+            text-align: center;
+            padding: 25px 0;
+            display: block;
+            width: 250px;
+            border: 1px blue dashed;
+            position: relative;
+        }
+
+        .main-area .tooltip {
+            visibility: hidden;
+            background-color: #333333;
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+            position: absolute;
+            bottom: 110%;
+            left: 50%;
+            width: 100px;
+            margin-left: -50px;
+            opacity: 0;
+            transition: all 0.2s;
+        }
+
+        .main-area .tooltip::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333333 transparent transparent transparent;
+        }
+
+        .main-area:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
 </head>
+
 <body>
 
     <!-- Modify the mark up to suit your needs -->
     <div class="main-area">
         Hover me to show pop-up
+        <div class="tooltip">I'm a popup</div>
     </div>
-    
+
 </body>
+
 </html>
