@@ -26,6 +26,11 @@ body {
     margin-top: -43px;
 }
 
+.slider .lower > div::before,
+.slider .upper > div::before {
+    content: "Awesome Alpha";
+}
+
 .slider > div {
     height: 43px;
     display: block;
